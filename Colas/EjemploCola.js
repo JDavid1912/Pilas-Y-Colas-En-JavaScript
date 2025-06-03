@@ -11,20 +11,20 @@ class ColaAtencion {
 
     // Método para agregar un cliente a la cola
     enqueue(cliente) {
-        if (this.isFull()) { // Verificamos si la cola está llena
+        if (this.isFull()) { 
             console.log(`🚫 La cola está llena. No se puede agregar a ${cliente}.`);
         } else {
-            this.cola.push(cliente); // Agregamos el cliente al final de la cola
+            this.cola.push(cliente); 
             console.log(`✅ Cliente ${cliente} ha sido agregado a la cola.`);
         }
     }
 
     // Método para atender al cliente que está en la parte frontal de la cola
     dequeue() {
-        if (this.isEmpty()) { // Verificamos si la cola está vacía
+        if (this.isEmpty()) { a
             console.log("🚫 No hay clientes en la cola para atender.");
         } else {
-            const clienteAtendido = this.cola.shift(); // Atendemos al primer cliente
+            const clienteAtendido = this.cola.shift(); 
             console.log(`👨‍💼 Cliente atendido: ${clienteAtendido}`);
         }
     }
@@ -49,8 +49,8 @@ class ColaAtencion {
     }
 }
 
-// Ahora, vamos a usar nuestro sistema de atención
-const atencionClientes = new ColaAtencion(5); // Creamos una nueva cola con capacidad para 5 clientes
+n
+const atencionClientes = new ColaAtencion(5); 
 
 // Agregamos algunos clientes a la cola
 atencionClientes.enqueue("Ana");
@@ -58,22 +58,21 @@ atencionClientes.enqueue("Luis");
 atencionClientes.enqueue("Carlos");
 atencionClientes.enqueue("Marta");
 atencionClientes.enqueue("Lucía");
-atencionClientes.enqueue("Pedro"); // Intentamos agregar a Pedro, pero la cola ya está llena
+atencionClientes.enqueue("Pedro"); 
 
 // Mostramos el estado de la cola
 atencionClientes.mostrarCola();
 
-// Atendemos a 2 clientes
+s
 console.log("\n⏱️ Atendiendo a 2 clientes...");
 atencionClientes.dequeue();
 atencionClientes.dequeue();
 
-// Mostramos el estado de la cola nuevamente
+
 atencionClientes.mostrarCola();
 
-// Intentamos agregar a Pedro de nuevo
+
 console.log("\n🔄 Agregando a Pedro de nuevo...");
 atencionClientes.enqueue("Pedro");
 
-// Mostramos el estado final de la cola
 atencionClientes.mostrarCola();

@@ -1,4 +1,4 @@
-// Se implementa una cola para gestionar turnos en una clínica 🏥
+// Ejemplo de implementación de una cola para gestionar turnos en una clínica
 // Este ejemplo muestra cómo agregar pacientes a una cola, atenderlos y verificar el estado de la cola.
 
 // Definimos una clase ColaTurnos que representa nuestro sistema de turnos en una clínica
