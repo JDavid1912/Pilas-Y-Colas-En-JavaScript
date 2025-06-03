@@ -2,7 +2,6 @@
 // Este ejemplo muestra cómo agregar pacientes a una cola, atenderlos y verificar el estado de la cola.
 
 // Definimos una clase ColaTurnos que representa nuestro sistema de turnos en una clínica
-// Este ejemplo muestra cómo agregar pacientes a una cola, atenderlos y verificar el estado de la cola.
 class ColaTurnos {
     constructor(capacidad) {
         this.items = [];
