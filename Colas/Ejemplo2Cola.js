@@ -1,4 +1,4 @@
-// Se implementa una cola para gestionar turnos en una clínica
+// Se implementa una cola para gestionar turnos en una clínica 🏥
 // Este ejemplo muestra cómo agregar pacientes a una cola, atenderlos y verificar el estado de la cola.
 
 // Definimos una clase ColaTurnos que representa nuestro sistema de turnos en una clínica
@@ -11,22 +11,22 @@ class ColaTurnos {
     // Encolar: agregar un paciente a la cola
     enqueue(paciente) {
         if (this.isFull()) {
-            console.log('La cola está llena. No se pueden agregar más pacientes.');
+            console.log('🚫 La cola está llena. No se pueden agregar más pacientes.');
             return false;
         }
         this.items.push(paciente);
-        console.log(`Paciente ${paciente} agregado a la cola.`);
+        console.log(`✅ Paciente ${paciente} agregado a la cola.`);
         return true;
     }
 
     // Desencolar: atender al siguiente paciente
     dequeue() {
         if (this.isEmpty()) {
-            console.log('La cola está vacía. No hay pacientes para atender.');
+            console.log('⚠️ La cola está vacía. No hay pacientes para atender.');
             return null;
         }
         const paciente = this.items.shift();
-        console.log(`Paciente ${paciente} atendido.`);
+        console.log(`🩺 Paciente ${paciente} atendido.`);
         return paciente;
     }
 
@@ -42,7 +42,7 @@ class ColaTurnos {
 
     // Mostrar el estado actual de la cola
     mostrarCola() {
-        console.log('Pacientes en espera:', this.items.join(', '));
+        console.log('🕒 Pacientes en espera:', this.items.join(', '));
     }
 }
 
